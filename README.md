@@ -30,3 +30,24 @@ COLLATE = latin1_spanish_ci;
       direccion varchar(150)
   );
   
+  >4.Crea una tabla denominada viajes que contendrá los siguientes campos:
+* id
+  * Integer
+  * autoincremental
+  * not_null
+  * primary_key
+* titulo
+  * varchar(50)
+* descripcion
+  * varchar(150)
+* codigoCliente 
+  * Integer 
+  * Forgein key clientes(id)
+
+CREATE TABLE viajes(
+    id integer auto_increment not null primary key,
+    titulo varchar(50),
+    description varchar(150),
+    codigoCliente integer, 
+    foreign key (codigoCliente) REFERENCES clientes(id)
+    );
